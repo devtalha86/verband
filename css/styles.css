@@ -455,7 +455,7 @@ html, body {
       .verband-overlay .overlay-info-expanded .verbandButton img {
         vertical-align: text-bottom;
         margin: 0 5px; }
-    .verband-overlay .overlay-info-expanded span.verband-icon-step-arrow {
+    .verband-overlay .overlay-info-expanded .verbandButton .verband-icon-step-arrow {
       font-size: 20px;
       vertical-align: text-bottom;
       margin-left: 5px; }
@@ -653,3 +653,8 @@ html, body {
 .offres-container #map {
   position: relative;
   top: -83px; }
+
+.verbandButton .verband-icon-step-arrow {
+  font-size: 20px;
+  vertical-align: text-bottom;
+  margin-left: 5px; }

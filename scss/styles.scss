@@ -226,7 +226,7 @@ html, body{
                 margin: 0 5px;
             }
         }
-        span.verband-icon-step-arrow{
+        .verbandButton .verband-icon-step-arrow{
             font-size: 20px;
             vertical-align: text-bottom;
             margin-left: 5px;
@@ -325,6 +325,7 @@ html, body{
                         box-shadow: 0 1px 5px #000;
                         height: 100px;
                         width: 100px;
+                        object-fit: cover;
                     }
                 }
                 .member-info{
@@ -499,4 +500,11 @@ html, body{
         position: relative;
         top: -83px;
     }
+}
+
+
+.verbandButton .verband-icon-step-arrow{
+    font-size: 20px;
+    vertical-align: text-bottom;
+    margin-left: 5px;
 }
