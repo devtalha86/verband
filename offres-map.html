@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Offres</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    
+</head>
+<body>
+                
+
+
+    <div class="container-fluid p-0">
+        <div class="row header-top-red no-gutters">
+            <div class="col">
+                <div class="verband-container">
+                    <a href="#">
+                        <i class="fab fa-facebook-square float-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row header-top-menu no-gutters">
+            <div class="col">
+                <div class="row verband-container">
+                    <a href="#">
+                        <img src="assets/image/logo.jpg" alt="">
+                    </a>    
+                    <ul class="menu">
+                        <li><a href="#">Acceuil</a></li>
+                        <li><a href="#">Adventage Card</a>
+                            <ul class="subMenu">
+                                <li><a href="#">Commander la carte</a></li>
+                                <li><a href="#">Les offres</a></li>
+                                <li><a href="#">Devenir partenaire</a></li>
+                                <li><a href="#">Conditions générales</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">L’association</a>
+                            <ul class="subMenu">
+                                <li><a href="#">Commander la carte</a></li>
+                                <li><a href="#">Les offres</a></li>
+                                <li><a href="#">Devenir partenaire</a></li>
+                                <li><a href="#">Conditions générales</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Liens</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="heading-les-offres">
+            <div class="row no-gutters les-offres-inside">
+                <div class="col-8">
+                    <h2><span class="verband-icon-link"></span>Les offres</h2>
+                </div>
+                <div class="col-4">
+                    <form class="lodurMobile-form" action="">
+                        <div class="offres-filter">
+                            <select>
+                                <option value="1">Leiser</option>
+                                <option value="2" selected="">Restaurant</option>
+                                <option value="3">Car Wash</option>
+                                <option value="4">Laundry</option>
+                            </select>
+                        </div>
+                        <div class="offres-search">
+                            <input class="" type="text" placeholder="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters offres-container">
+            <div class="col-12">
+                <div class="offresTabs">
+                    <button class="" onclick="openOffres('Table')">Vue Liste</button>
+                    <button class="activeTab" onclick="openOffres('map')">Vue Carte</button>
+                </div>                         
+            </div>
+            <div class="col-12">
+                <div id="Table" class="offres offresTable" style="display:none">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Societe</th>
+                                <th>Fammille</th>
+                                <th>Lieu</th>
+                                <th>Offre</th>
+                                <th>Offre </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Europa Park</td>
+                                <td>Loisirs</td>
+                                <td>Rust DE</td>
+                                <td>Plus grand oarc d'attraction d'europe</td>
+                                <td>-10%</td>
+                            </tr>
+                            <tr>
+                                <td>Migros</td>
+                                <td>Commerces</td>
+                                <td>Valais</td>
+                                <td>Leader de la distribution</td>
+                                <td>-20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    
+                <div class="map-container offres" id="map"></div>
+            </div>
+        </div>
+    </div>
+
+        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+            $(document).ready(function(){
+                $('.offresTabs button').click(function(){
+                    $('button').removeClass("activeTab");
+                    $(this).addClass("activeTab");
+                });
+            });
+
+
+            function openOffres(offresName) {
+            var i;
+            var x = document.getElementsByClassName("offres");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(offresName).style.display = "block";
+            }
+
+
+        // Openlayers Map
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
+            ],
+            view: new ol.View({
+            center: ol.proj.fromLonLat([37.41, 8.82]),
+            zoom: 4
+            })
+        });
+
+    </script>
+    
+
+</body>
+</html>

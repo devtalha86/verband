@@ -25,9 +25,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.verband-icon-cart:before {
+.verband-icon-attachment:before {
+  content: "\e906";
+}
+.verband-icon-step-arrow:before {
+  content: "\e907";
+}
+.verband-icon-link:before {
   content: "\e900";
 }
-.verband-icon-location:before {
+.verband-icon-member:before {
   content: "\e901";
 }
+.verband-icon-partner:before {
+  content: "\e902";
+}
+.verband-icon-portrait:before {
+  content: "\e903";
+}
+.verband-icon-cart:before {
+  content: "\e904";
+}
+.verband-icon-location:before {
+  content: "\e905";
+}
+
+
+
+
