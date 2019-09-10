@@ -524,7 +524,8 @@ html, body {
         border: 3px solid #fff;
         box-shadow: 0 1px 5px #000;
         height: 100px;
-        width: 100px; }
+        width: 100px;
+        object-fit: cover; }
       .verband-overlay .member-container ul li .member-info {
         padding: 25px 0 0 20px; }
         .verband-overlay .member-container ul li .member-info h4 {
