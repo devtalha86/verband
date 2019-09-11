@@ -28,8 +28,8 @@
         <div class="row header-top-menu no-gutters">
             <div class="col">
                 <div class="row verband-container">
-                    <a href="#">
-                        <img src="assets/image/logo.jpg" alt="">
+                    <a class="verbandLogo" href="#">
+                        <img src="assets/image/logo.png" alt="">
                     </a>    
                     <ul class="menu">
                         <li><a href="#">Acceuil</a></li>
@@ -91,44 +91,202 @@
                     </div>
                     <div class="overlay-info-inner">
                         <div class="partner-container">
-                            <h4>Societe partenaire</h4>
                             <form class="lodurMobile-form" action="">
                                 <input class="invisible" id='step2' type='checkbox'>
+                                <input class="invisible" id='step3' type='checkbox'>
+                                <input class="invisible" id='step4' type='checkbox'>
+                                <input class="invisible" id='step5' type='checkbox'>
+                                
                                 <div class="row" id="part1">
+                                    <div class="col-6">
+                                        <h4>Société partenaire</h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <!-- Circles which indicates the steps of the form: -->
+                                        <div style="text-align:right;">
+                                            <span class="step active"></span>
+                                            <span class="step"></span>
+                                            <span class="step"></span>
+                                            <span class="step"></span>
+                                        </div>
+                                    </div>
                                     <div class="col-12">
                                         <label for="">Nom de la société <span class="important-field">*</span></label><input class="" type="text" placeholder="">
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-8 pr-2">
                                         <label for="">Rue<span class="important-field">*</span></label><input class="" type="text" placeholder="">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-4 pl-2">
                                         <label for="">n<span class="important-field">*</span></label><input class="" type="text" placeholder="">
                                     </div>
                                     <div class="col-12">
                                         <label for="">Complement d’adresse<span class="important-field">*</span></label><input class="" type="text" placeholder="">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-2 pr-2">
                                         <label for="">NPA<span class="important-field">*</span></label><input class="" type="text" placeholder="">
                                     </div>
-                                    <div class="col-9">
+                                    <div class="col-4 pl-2 pr-2">
                                         <label for="">Lieu<span class="important-field">*</span></label><input class="" type="text" placeholder="">
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-6 pl-2">
                                         <label for="">Site web<span class="important-field">*</span></label><input class="" type="text" placeholder="">
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-6">
                                         <div class="">
-                                            <label class="mb-1" for="">Photo du livret de service (Page 1)</label><br>
+                                            <label class="mb-1" for="">Logo de la société</label><br>
+                                            <button><span class="verband-icon-attachment"></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="">
+                                            <label class="mb-1" for="">Photo relative à l'offre</label><br>
                                             <button><span class="verband-icon-attachment"></span></button>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <label for='step2' id="continue-step2" class="continue">
-                                            <div class="verbandButton">Next<span class="verband-icon-step-arrow"></span></div>
+                                            <div class="verbandButton">Next<span class="verband-icon-step-arrow-right"></span></div>
                                         </label>
                                     </div>
                                 </div>
-                                <div class="row feedback-message" id="part2">
+                                <div class="row" id="part2">
+                                    <div class="col-6">
+                                        <h4>Personne de contact<span>de la société partenaire</span></h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <!-- Circles which indicates the steps of the form: -->
+                                        <div style="text-align:right;">
+                                            <span class="step finish"></span>
+                                            <span class="step active"></span>
+                                            <span class="step"></span>
+                                            <span class="step"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pr-2">
+                                        <label for="">Titre <span class="important-field">*</span></label>
+                                        <select>
+                                            <option value="1">Item 1</option>
+                                            <option value="2" selected="">Item 2</option>
+                                            <option value="3">Item 3</option>
+                                            <option value="4">Item 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6"></div>
+                                    <div class="col-6 pr-2">
+                                        <label for="">Prénom <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6 pl-2">
+                                        <label for="">Nom <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6 pr-2">
+                                        <label for="">Mail <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6 pl-2">
+                                        <label for="">Mobile <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="">La personne de contact doit apparaitre sur notre site <span class="important-field">*</span></label>
+                                        <span style="display: block;"><input type="radio" name="gender" value="female"> oui</span>
+                                        <span style="display: block;"><input type="radio" name="gender" value="other"> non</span>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label for='step2' id="continue-step2" class="continue">
+                                            <div class="verbandButton"><span class="verband-icon-step-arrow-left"></span>back</div>
+                                        </label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for='step3' id="continue-step3" class="continue">
+                                            <div class="verbandButton">Next<span class="verband-icon-step-arrow-right"></span></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row" id="part3">
+                                    <div class="col-6">
+                                        <h4>Proposition de partenariat<span></span></h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <!-- Circles which indicates the steps of the form: -->
+                                        <div style="text-align:right;">
+                                            <span class="step finish"></span>
+                                            <span class="step finish"></span>
+                                            <span class="step active"></span>
+                                            <span class="step"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="">Famille <span class="important-field">*</span></label>
+                                        <select>
+                                            <option value="1">Item 1</option>
+                                            <option value="2" selected="">Item 2</option>
+                                            <option value="3">Item 3</option>
+                                            <option value="4">Item 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="">Description <span class="important-field">*</span></label>
+                                        <textarea name="comment" form="usrform" placeholder="Enter text here..."></textarea>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="">Type d'avantage <span class="important-field">*</span></label>
+                                        <select>
+                                            <option value="1">Item 1</option>
+                                            <option value="2" selected="">Item 2</option>
+                                            <option value="3">Item 3</option>
+                                            <option value="4">Item 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="">Remarques</label>
+                                        <textarea name="comment" form="usrform" placeholder="Enter text here..."></textarea>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for='step3' id="continue-step3" class="continue">
+                                            <div class="verbandButton"><span class="verband-icon-step-arrow-left"></span>back</div>
+                                        </label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for='step4' id="continue-step4" class="continue">
+                                            <div class="verbandButton">Next<span class="verband-icon-step-arrow-right"></span></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row" id="part4">
+                                    <div class="col-6">
+                                        <h4>Personne de contact<span>Membre de l'ACSPVR</span></h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <!-- Circles which indicates the steps of the form: -->
+                                        <div style="text-align:right;">
+                                            <span class="step finish"></span>
+                                            <span class="step finish"></span>
+                                            <span class="step finish"></span>
+                                            <span class="step active"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pr-2">
+                                        <label for="">Prénom <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6 pl-2">
+                                        <label for="">Nom <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6 pr-2">
+                                        <label for="">CSP / CSI <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6"></div>
+                                    <div class="col-6 pr-2">
+                                        <label for="">Mail <span class="important-field">*</span></label><input class="" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6 pl-2">
+                                        <label for="">Mobile <span class="important-field">*</span></label><input class="" type="number" placeholder="">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for='step5' id="continue-step5" class="continue">
+                                            <div class="verbandButton">Envoyer</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row feedback-message" id="part5">
                                     <div class="col-12">
                                         <p>Fredeeric,</p>
                                         <p>Merci de votre commande.</p>
@@ -165,6 +323,80 @@
             $(this).attr("trigger","0");
         }
     });
+
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+        // This function will display the specified tab of the form ...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        // ... and fix the Previous/Next buttons:
+        if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+        } else {
+            document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        // ... and run a function that displays the correct step indicator:
+        fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form... :
+        if (currentTab >= x.length) {
+            //...the form gets submitted:
+            document.getElementById("regForm").submit();
+            return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+        }
+
+        function validateForm() {
+        // This function deals with validation of the form fields
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+            // If a field is empty...
+            if (y[i].value == "") {
+            // add an "invalid" class to the field:
+            y[i].className += " invalid";
+            // and set the current valid status to false:
+            valid = false;
+            }
+        }
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class to the current step:
+        x[n].className += " active";
+        }
+
 
     </script>
     
