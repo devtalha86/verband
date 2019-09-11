@@ -52,18 +52,16 @@ html, body{
 }
 
 .verband-page-space{
-    max-width: 1765px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 80px;
 }
 
 .header-top-red{
     background-color: $primary-red;
     padding: 6px 0;
     .verband-container{
-        max-width: 1765px;
         margin: 0 auto;
-        padding: 0 50px;
+        padding: 0 80px;
         i{
             color: #fff;
             font-size: 24px;
@@ -75,9 +73,8 @@ html, body{
     background-color: $primary-grey;
     padding: 6px 0;
     .verband-container{
-        max-width: 1765px;
         margin: 0 auto;
-        padding: 0 50px;
+        padding: 0 80px;
         align-items: center;
         justify-content: space-between;
         ul.menu{
@@ -428,11 +425,10 @@ html, body{
 .heading-les-offres{
     background: $primary-red;
     .les-offres-inside{
-        max-width: 1765px;
         margin: 0 auto;
         align-items: center;
         justify-content: space-between;
-        padding: 7px 50px 0;
+        padding: 7px 80px 0;
         h2{
             color: #fff;
             font-size: 16px;
