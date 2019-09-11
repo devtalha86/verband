@@ -51,12 +51,19 @@ html, body{
     font-family: 'Montserrat';
 }
 
+.verband-page-space{
+    max-width: 1765px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
 .header-top-red{
     background-color: $primary-red;
     padding: 6px 0;
     .verband-container{
         max-width: 1765px;
         margin: 0 auto;
+        padding: 0 50px;
         i{
             color: #fff;
             font-size: 24px;
@@ -70,6 +77,7 @@ html, body{
     .verband-container{
         max-width: 1765px;
         margin: 0 auto;
+        padding: 0 50px;
         align-items: center;
         justify-content: space-between;
         ul.menu{
@@ -134,20 +142,19 @@ html, body{
 
 #movable{
     position:relative;
-    width: 100%;
+    width: 545px;
     background-color:$primary-red;
 }
 
 .red-header{
     position:relative;
-    width: 100%;
+    width: 545px;
     background-color:$primary-red;
 }
 
 .verband-overlay{
     position: absolute;
-    width: 545px;
-    margin: 50px 0 0 70px;
+    margin: 50px 0 0 0;
     .overlay-info{
         background-color: $transparent-white;
         width: 545px;
@@ -282,7 +289,7 @@ html, body{
         }
 
     }
-    .overlay-info{
+    .overlay-info-inner{
         background-color: $transparent-white;
         width: 545px;
         padding: 20px 30px;
@@ -425,10 +432,13 @@ html, body{
         margin: 0 auto;
         align-items: center;
         justify-content: space-between;
-        padding: 7px 0 0 0;
+        padding: 7px 50px 0;
         h2{
             color: #fff;
             font-size: 16px;
+            span{
+                margin-right: 10px;
+            }
         }
         form{
             display: flex;
