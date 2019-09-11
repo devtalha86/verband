@@ -548,14 +548,15 @@ html, body {
     /* Show Step 4 & Hide Step 3 */
     /* Show Step 5 & Hide Step 4 */ }
     .verband-overlay .partner-container h4 {
-      border-bottom: 1px solid #ccc;
-      padding: 0 0 10px 0;
-      margin-bottom: 10px;
+      padding: 0;
+      margin: 0;
       font-size: 20px; }
       .verband-overlay .partner-container h4 span {
         font-size: 12px;
         color: #757575;
         display: block; }
+    .verband-overlay .partner-container hr {
+      margin: 10px 0 15px 0; }
     .verband-overlay .partner-container label {
       width: 100%; }
     .verband-overlay .partner-container button {
