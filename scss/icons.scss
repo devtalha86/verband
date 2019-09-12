@@ -28,8 +28,11 @@
 .verband-icon-attachment:before {
   content: "\e906";
 }
-.verband-icon-step-arrow:before {
+.verband-icon-step-arrow-left:before {
   content: "\e907";
+}
+.verband-icon-step-arrow-right:before {
+  content: "\e908";
 }
 .verband-icon-link:before {
   content: "\e900";
@@ -49,7 +52,4 @@
 .verband-icon-location:before {
   content: "\e905";
 }
-
-
-
 

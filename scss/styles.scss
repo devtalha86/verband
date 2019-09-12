@@ -3,7 +3,7 @@
 
 /* Lodur Mobile Form Elements Start **************************************************/
 
-.lodurMobile-form input[type=text], .lodurMobile-form input[type=date], .lodurMobile-form input[type=time], .lodurMobile-form select{
+.lodurMobile-form input[type=text], .lodurMobile-form input[type=number], .lodurMobile-form input[type=date], .lodurMobile-form input[type=time], .lodurMobile-form select{
     padding: 0.4rem 0.3rem;
     border-radius: 0.25rem;
     border: 1px solid #dadada;
@@ -13,6 +13,10 @@
     width: 100%;
     margin-bottom: 10px;
     height: 36px;
+}
+
+.lodurMobile-form input[type=radio]{
+    vertical-align: middle;
 }
 
 .lodurMobile-form textarea{
@@ -43,12 +47,22 @@
     color: red;
 }
 
+.customFileUpload {
+}
+
+
 /* Lodur Mobile Form Elements End **************************************************/
 
 html, body{
     padding: 0;
     margin: 0;
     font-family: 'Montserrat';
+}
+
+.verbandLogo{
+    img{
+        // width: 220px;
+    }
 }
 
 .verband-page-space{
@@ -258,8 +272,7 @@ html, body{
         
         /* Styling Parts */
         #part1,
-        #part2,
-        #part3 {
+        #part2{
             z-index: 2;
             height: auto;
             opacity: 1;
@@ -267,8 +280,7 @@ html, body{
         }
 
         /* Hidden Parts */
-        #part2,
-        #part3 {
+        #part2{
             opacity: 0;
             height: 0;
             overflow: hidden;
@@ -284,6 +296,8 @@ html, body{
             height: 0;
             display: none;
         }
+
+
 
     }
     .overlay-info-inner{
@@ -347,12 +361,28 @@ html, body{
     }
     .partner-container{
         h4{
-            border-bottom: 1px solid #ccc;
-            padding: 0 0 10px 0;
-            margin-bottom: 20px;
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+            span{
+                font-size: 12px;
+                color: #757575;
+                display: block;
+            }
+        }
+        hr{
+            margin: 10px 0 15px 0;
         }
         label{
             width: 100%;
+        }
+        button{
+            background: transparent;
+            border: 0;
+            outline: none;
+            span{
+                font-size: 18px;
+            }
         }
         .verbandButton{
             border: 1px solid #000000;
@@ -394,7 +424,9 @@ html, body{
         /* Styling Parts */
         #part1,
         #part2,
-        #part3 {
+        #part3,
+        #part4,
+        #part5 {
             z-index: 2;
             height: auto;
             opacity: 1;
@@ -403,7 +435,9 @@ html, body{
 
         /* Hidden Parts */
         #part2,
-        #part3 {
+        #part3,
+        #part4,
+        #part5 {
             opacity: 0;
             height: 0;
             overflow: hidden;
@@ -419,6 +453,40 @@ html, body{
             height: 0;
             display: none;
         }
+
+        /* Show Step 3 & Hide Step 2 */
+        #step3:checked ~ #part3 {
+            opacity: 1;
+            height: auto;
+        }
+        #step3:checked ~ #part2 {
+            opacity: 0;
+            height: 0;
+            display: none;
+        }
+
+        /* Show Step 4 & Hide Step 3 */
+        #step4:checked ~ #part4 {
+            opacity: 1;
+            height: auto;
+        }
+        #step4:checked ~ #part3 {
+            opacity: 0;
+            height: 0;
+            display: none;
+        }
+
+        /* Show Step 5 & Hide Step 4 */
+        #step5:checked ~ #part5 {
+            opacity: 1;
+            height: auto;
+        }
+        #step5:checked ~ #part4 {
+            opacity: 0;
+            height: 0;
+            display: none;
+        }
+
     }
 }
 
@@ -508,9 +576,61 @@ html, body{
     }
 }
 
-
-.verbandButton .verband-icon-step-arrow{
-    font-size: 20px;
-    vertical-align: text-bottom;
-    margin-left: 5px;
+.verbandButton {
+    .verband-icon-step-arrow-left{
+        font-size: 20px;
+        vertical-align: text-bottom;
+        margin-right: 5px;
+    }    
 }
+
+.verbandButton {
+    .verband-icon-step-arrow-right{
+        font-size: 20px;
+        vertical-align: text-bottom;
+        margin-left: 5px;
+    }    
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #4CAF50;
+  }
+  
+
+  .discoverMap-header{
+    background: $primary-grey;
+    padding: 5px 0;
+    text-align: center;
+    margin-top: 30px;
+    h1{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 10px 0 3px;
+        span{
+            font-size: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+            position: relative;
+            top: -2px;
+        }
+    }
+  }
